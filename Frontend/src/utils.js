@@ -1,0 +1,1 @@
+export const BACKEND_URL="https://multi-blog-y7yk.onrender.com"
