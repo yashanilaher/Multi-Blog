@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import toast from 'react-hot-toast';
 import { useAuth } from '../context/AuthProvider';
+import { BACKEND_URL } from '../utils';
+
 
 const Register = () => {
   const {isAuthenticated,setIsAuthenticated,setProfile}=useAuth();
@@ -44,7 +46,7 @@ const Register = () => {
     formData.append("photo",photo);
     try{
       const {data}=await axios.post(
-        "http://localhost:4000/api/users/register",
+        `${BACKEND_URL}/api/users/register`,
         formData,  
         {
           headers:{

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../context/AuthProvider";
+import { BACKEND_URL } from "../utils";
 
 const Detail = () => {
   const { id } = useParams();
@@ -17,7 +18,7 @@ const Detail = () => {
     const fetchSelectedblogForUpdating = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/blogs/single-blog/${id}`,
+          `${BACKEND_URL}/api/blogs/single-blog/${id}`,
           {
             withCredentials: true,
             headers: {

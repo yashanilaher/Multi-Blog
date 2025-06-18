@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+import { BACKEND_URL } from "../utils";
 
 const Creator = () => {
   //here want all admins and have use just in this component so not using or stroing it on context api
@@ -9,7 +10,7 @@ const Creator = () => {
     const fetchAdmins = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/users/admins",
+          `${BACKEND_URL}/api/users/admins`,
           {
             withCredentials: true,
           }

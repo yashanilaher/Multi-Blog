@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { BACKEND_URL } from "../utils";
 
 const Creators = () => {
   const [creators, setCreators] = useState([]);
@@ -10,7 +11,7 @@ const Creators = () => {
     const fetchCreators = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/users/admins",
+          `${BACKEND_URL}/api/users/admins`,
           {
             withCredentials: true,
           }

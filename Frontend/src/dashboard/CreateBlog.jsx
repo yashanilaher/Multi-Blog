@@ -1,6 +1,7 @@
 import React,{ useState } from 'react'
 import axios from "axios";
 import toast from 'react-hot-toast';
+import { BACKEND_URL } from '../utils';
 
 const CreateBlog = () => {
   const [title,setTitle]=useState("");
@@ -40,7 +41,7 @@ const CreateBlog = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/blogs/create",
+        `${BACKEND_URL}/api/blogs/create`,
         formData,
         {
           headers: {

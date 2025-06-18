@@ -6,6 +6,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { useAuth } from "../context/AuthProvider";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { BACKEND_URL } from "../utils";
 
 const Navbar=()=>{
     const [Role,setRole]=useState("");
@@ -18,7 +19,7 @@ const Navbar=()=>{
     const handleLogout=async(e)=>{
         e.preventDefault();
         try{
-            const response=await axios.get("http://localhost:4000/api/users/logout",
+            const response=await axios.get(`${BACKEND_URL}/api/users/logout`,
                 {
                     withCredentials:true
                 }

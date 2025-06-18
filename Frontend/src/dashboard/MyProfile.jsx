@@ -1,5 +1,6 @@
 import React from 'react'
 import { useAuth } from '../context/AuthProvider';
+import { BACKEND_URL } from '../utils';
 
 const MyProfile = () => {
   const {profile}=useAuth();
