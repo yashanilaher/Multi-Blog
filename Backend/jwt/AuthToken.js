@@ -10,8 +10,8 @@ const createTokenSaveCookies=async(userId,res)=>{
 
     res.cookie("jwt",token,{
         httpOnly:false, //xss
-        secure:false,
-        samesite:"strict" //csrf
+        secure:true,
+        samesite:"none" //csrf
     })
 
     await User.findByIdAndUpdate(userId,{token:token})
