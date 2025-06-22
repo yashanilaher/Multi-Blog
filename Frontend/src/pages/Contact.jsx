@@ -17,9 +17,8 @@ const Contact = () => {
     }
     //calling external api , for secnding the form data to our email
     try{
-      await axios.post("https://api.web3forms.com/submit",userInfo,
-        toast.success("Message sent successfully"),
-      )
+      await axios.post("https://api.web3forms.com/submit",userInfo)
+      toast.success("Message sent successfully")
     }
     catch(error){
       toast.error("An error Occured");
