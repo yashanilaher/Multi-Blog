@@ -79,7 +79,7 @@ const UpdateBlog = () => {
       );
       // console.log("after updating",data);
       toast.success("Blog Updated Successfully");
-      navigateTo("/");
+      navigateTo("/dashboard");
     }
     catch(error){
       console.log(error);
