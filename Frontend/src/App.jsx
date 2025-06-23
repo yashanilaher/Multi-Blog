@@ -17,6 +17,10 @@ import UpdateBlog from './dashboard/UpdateBlog.jsx';
 import Detail from './pages/Detail.jsx';
 import { useAuth } from './context/AuthProvider.jsx'
 import NotFound from './pages/NotFound.jsx';
+import axios from 'axios';
+
+axios.defaults.withCredentials = true;
+
 
 const App = () => {
   const location =useLocation()
