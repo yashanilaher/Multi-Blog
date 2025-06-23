@@ -9,7 +9,7 @@ const createTokenSaveCookies=async(userId,res)=>{
     res.cookie("jwt",token,{
         httpOnly:true, //xss
         secure:true,
-        samesite:"none", //csrf
+        sameSite:"none", //csrf
         maxAge:60 * 60 * 1000 // 7 days in milliseconds
     })
 

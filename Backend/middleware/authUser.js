@@ -13,7 +13,7 @@ export const isAuthenticated = async(req,res,next) => {
         // console.log(req.cookies);
         const token=req.cookies.jwt;  //also used in logout and no cookies so undefined so will go in catch
         // console.log(req.cookies.jwt);
-        // console.log("token",token);
+        console.log("token",token);
         if (!token){
             return res.status(401).json({error:"User not authenticateddddd"});
         }
